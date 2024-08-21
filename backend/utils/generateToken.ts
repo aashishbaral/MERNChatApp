@@ -9,7 +9,7 @@ const generateToken = (userId: string, res: Response) => {
   res.cookie("token", token, {
     httpOnly: true, // cookie cannot be accessed by client-side scripts (XSS protection)
     maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days in milliseconds
-    sameSite: "none", // cookie is sent only to the same site as the domain in the address bar (CSRF protection)
+    sameSite: "strict", // cookie is sent only to the same site as the domain in the address bar (CSRF protection)
     secure: process.env.NODE_ENV === "production",
   });
 };

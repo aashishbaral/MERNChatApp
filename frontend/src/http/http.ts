@@ -1,10 +1,12 @@
 import axios from "axios";
 
-const api_url = "https://mernchatapp-xxuj.onrender.com/";
+// const api_url = "http://localhost:3000/api/";
 
 export const API = axios.create({
-  baseURL: api_url,
-  withCredentials: true,
+  baseURL: "/api/",
+  headers: {
+    "Access-Control-Allow-Origin": "*", // Allow CORS
+  },
 });
 
 API.interceptors.request.use(

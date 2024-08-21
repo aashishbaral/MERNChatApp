@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "ts-node-dev --respawn --transpile-only backend/app.ts",
     "start": "node backend/build/app.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && rimraf backend/build && tsc"
+    "build": "npm install && npm install --prefix frontend && rimraf frontend/dist && npm run build --prefix frontend && rimraf backend/build && tsc"
   },
   "keywords": [],
   "author": "",
