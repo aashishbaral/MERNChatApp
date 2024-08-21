@@ -4,9 +4,7 @@ const api_url = "https://mernchatapp-xxuj.onrender.com/";
 
 export const API = axios.create({
   baseURL: api_url,
-  headers: {
-    "Content-Type": "application/json",
-  },
+  withCredentials: true,
 });
 
 API.interceptors.request.use(
