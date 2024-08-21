@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api_url = import.meta.env.VITE_API_URL as string;
+const api_url = "https://mernchatapp-xxuj.onrender.com/";
 
 export const API = axios.create({
   baseURL: api_url,
