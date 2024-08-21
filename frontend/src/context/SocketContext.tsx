@@ -23,7 +23,7 @@ export const SocketContextProvider = ({
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:3000", {
+      const socket = io("https://mernchatapp-xxuj.onrender.com/", {
         query: {
           userId: authUser._id,
         },
